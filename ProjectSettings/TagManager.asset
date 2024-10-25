@@ -5,16 +5,17 @@ TagManager:
   serializedVersion: 2
   tags:
   - Arrow_head
+  - Arrow
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Ignor Camera
   - Water
   - UI
   - 
   - 
-  - 
+  - body
   - 
   - 
   - 

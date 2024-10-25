@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using UnityEngine;
 
@@ -58,11 +59,17 @@ public class Arrow : MonoBehaviour
         }
     }
 
-    private void CheckCollision()
+    private void OnTriggerEnter(Collider other)
     {
+        
+    }
+
+    private void CheckCollision() {
+
         if (Physics.Linecast(_lastPosition, tip.position, out RaycastHit hitInfo))
         {
-            if (hitInfo.transform.gameObject.layer == 8)
+            Debug.LogError("toucher");
+            if (hitInfo.transform.gameObject.layer != 8)
             {
                 if (hitInfo.transform.TryGetComponent(out Rigidbody body))
                 {
